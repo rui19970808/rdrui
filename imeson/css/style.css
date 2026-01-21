@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+/* フォント */
+@font-face
+{
+font-family: たぬゴ;
+src: url('https://dl.dropboxusercontent.comscl/fi/0uaim4ogcle1s8xcue5iq/webyoko.woff?rlkey=493xgsugy4u1cur9gofeiqbct&st=btbrv29x')format("woff");
+src: url('https://dl.dropboxusercontent.com/scl/fi/nf4j4lxdtd9crjjtiyzgn/webyoko.woff2?rlkey=206ruqoj5dnmgxeusv9w5r0ke&st=oqvtwdt1')format("woff2");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #FFFAFA;
+  color: #936899;
+  font-family: 'たぬゴ', sans-serif;
+  line-height: 2;
+}
+
+/* 中央寄せ */
+main {
+  max-width: 40em;
+  margin: 4em auto;
+  padding: 2em;
+  text-align: center;
+}
+
+/* 見出し */
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+/* テキスト */
+p {
+  margin-bottom: 1.5em;
+}
+
+/* リンク色 */
+a:link {
+  color: #FF88E5;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #79A5FF;
+}
+
+/* ホバー時（色変えない） */
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/* 夢小説リンク用ボックス */
+.novel-box{
+  background-color: #fff;
+  padding: 0.8em 3em;   /* ← 縦0.8em、横3em */
+  width: fit-content;  /* 文字＋少し余白 */
+  margin: 2em auto;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+
+/* ボックス内リンク */
+.novel-box a{
+  display: block;
+  font-size: 1.6em;
+  margin: 0.4em 0;
+  text-decoration: none;
+  color: #FF88E5;             /* 未クリック */
+}
+
+/* クリック済み */
+.novel-box a:visited{
+  color: #79A5FF;
+}
+
+/* ホバーしても色変えない */
+.novel-box a:hover{
+  opacity: 0.8;               /* ほんのり反応だけ */
+}
+
+a:hover,
+a:active{
+  position: relative;
+  bottom: -1px;
+  right: -1px;
+}
+

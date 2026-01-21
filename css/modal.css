@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+a#return{
+	font-size: 2em;
+}
+
+/* プロフ */
+
+#prof h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 縦方向中央揃え */
+    gap: 0.5em;
+    font-size: 1.7em; /* 文字サイズ */
+}
+
+#prof h1 #icon {
+    width: 6rem;   /* アイコンの幅 */
+    height: 6rem;  /* 高さも固定して文字と中央に */
+    flex-shrink: 0; /* 縮まらないように */
+}
+
+
+#prof h1{
+	font-size: 1.7em;
+}
+
+#prof .text{
+	margin: 2em auto;
+	padding: 0 2em;
+}
+
+#menu{
+	gap: 1em 1.4em;
+}
+
+#menu a i{
+	font-size: 1.5em;
+	margin-bottom: -0.2em;
+}
+
+#menu a span{
+	font-size: 0.6em;
+}
+
+/* ボックスの中 */
+.box{
+	padding:  2.5em;
+}
+
+.box p + h2,
+.box ul + h2,
+.box dl + h2{
+	margin-top: 1.2em;
+}
+
+.box p + h3,
+.box ul + h3,
+.box dl + h3{
+	margin-top: 2em;
+}
+
+.box > p{
+	margin: 1.2em 0;
+}
+
+.box > div{
+	margin: 1.4em 0;
+}
+
+dl,ul{
+	margin: 1.2em 0;
+	padding-left: 1.4em;
+}
+
+dt::before,
+li::before{
+	left: -1.4em;
+}
+
+ul.column2,
+ul.column3{
+	column-count: 1;
+}
+
+ul.m-column2{
+	column-count: 2;
+}
+
+ul.m-column3{
+	column-count: 3;
+}
+
+/* ↓イラスト部分 */
+.illustlog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.illustlog .illust {
+  flex: 0 0 calc((100% - 2em) / 3);
+  box-sizing: border-box;
+}
+
+.illust img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.illustlog .illust figure a.overlay {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em; /* 画像同士の間隔 */
+}
+
+.illustlog .illust figure a.overlay img {
+  width: 100%;      /* 親幅に合わせる */
+  max-width: 200px;  /* 好きなサイズに制限 */
+  height: auto;
+  display: block;
+}
+
+
+
+/* ↓オフライン */
+.booklist{
+	 flex-direction: column;
+}
+
+.book{
+	width: 100%;
+	padding: 0 0 2em 0;
+	border: none;
+	border-bottom: solid 1px var(--color-accent);
+}
+
+.booklist div.book:last-child{
+	padding: 0;
+	border-bottom: none;
+}
+
+.book .gaiyou{
+	gap: 1em;
+}
+
+.book .gaiyou p.product{
+	font-size: 0.7em;
+}　

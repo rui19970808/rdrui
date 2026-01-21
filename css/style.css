@@ -1,0 +1,399 @@
+@charset "UTF-8";
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	position: relative;
+	padding: var(--margin-base);
+	font-family: var(--font-primary);
+	font-weight: 400;
+	overflow-x: hidden;
+	background-color: var(--color-base);
+	color: var(--color-text);
+}
+
+a#return{
+	display: block;
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	font-size: 3em;
+	line-height: 1;
+	color: var(--color-accent);
+}
+
+a{
+	color: var(--color-main);
+}
+
+/* コンテンツエリア */
+section{
+	max-width: 110rem;
+	margin: 0 auto var(--margin-base);
+}
+
+section:last-of-type{
+	margin-bottom: 0;
+}
+
+/* プロフ */
+#prof > *{
+	margin: 0 auto;
+	width: fit-content;
+}
+
+#prof h1{
+	font-size: 2.2em;
+	line-height: 1.8em;
+	letter-spacing: 0.5rem;
+	font-weight: 600;
+}
+
+#prof h1:first-letter{
+	color: var(--color-main);
+}
+
+#prof #icon{
+	margin-right: 0.7em;
+	width: 1.8em;
+	aspect-ratio: 1 / 1;
+	border-radius:50%;
+	vertical-align: middle;
+	object-fit:cover;
+	background-color: var(--color-accent);
+}
+
+#prof .text{
+	margin: 2em auto 2.5em;
+	width: fit-content;
+}
+
+#menu{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.4em 2em;
+	margin-top: 2em;
+}
+
+#menu a{
+	display: block;
+	text-align: center;
+	font-weight: 600;
+	color: var(--color-text);
+}
+
+#menu a i{
+	display: block;
+	margin-bottom: -0.1em;
+	width: 2.5em;
+	height: 2.5em;
+	font-size: 1.8em;
+	line-height: 2.5em;
+	border-radius:50%;
+}
+
+#menu a span{
+	font-size: 0.7em;
+	letter-spacing: 0.1em;
+}
+
+#menu a:nth-child(odd) i{
+	background-color: var(--color-main);
+}
+
+#menu a:nth-child(even) i{
+	background-color: var(--color-accent);
+}
+
+#menu a:hover i{
+	color: var(--color-base);
+}
+
+#menu a:hover:nth-child(odd) i,
+#menu a:hover:nth-child(even) i{
+	background-color: var(--color-text);
+}
+
+/* ボックスの中 */
+.box{
+	padding: var(--margin-base);
+	background-color: var(--color-light);
+	border-radius: var(--border-radius);
+
+	min-height: 1px;
+	overflow: hidden;
+
+	position: relative;
+	z-index: 1;
+}
+
+.box h2{
+	padding-bottom: 0.2em;
+	font-size: 1.2em;
+	font-weight: 600;
+	border-bottom: solid 1px var(--color-main);
+}
+
+.box h2:first-letter{
+	color: var(--color-main);
+}
+
+.box p + h2,
+.box ul + h2,
+.box dl + h2{
+	margin-top: 1.5em;
+}
+
+.box h3{
+	padding-bottom: 0.2em;
+	width: fit-content;
+	font-size: 1.1em;
+	font-weight: 600;
+	border-bottom: solid 1px var(--color-accent);
+}
+
+.box h3:first-letter{
+	color: var(--color-accent);
+}
+
+.box p + h3,
+.box ul + h3,
+.box dl + h3{
+	margin-top: 2.2em;
+}
+
+.box > p{
+	margin: 1.4em 0;
+}
+
+.box > div{
+	margin: 2em 0;
+}
+
+.box > *:first-child{
+	margin-top: 0;
+}
+
+.box > *:last-child{
+	margin-bottom: 0;
+}
+
+.box strong{
+	font-weight: 600;
+	background:linear-gradient(transparent 60%, var(--color-marker) 60%);
+}
+
+.text a{
+	text-decoration: underline;
+	font-weight: 600;
+}
+
+.text a::after{
+	margin-left: 0.2em;
+	font-family: var(--font-icon);
+	content: "\f35d";
+	font-weight: 900;
+}
+
+dl,ul{
+	margin: 1.4em 0;
+	padding-left: 1.6em;
+}
+
+dt,li{
+	position: relative;
+}
+
+ul{
+	column-gap: var(--margin-base);
+}
+
+ul.column2{
+	column-count: 2;
+}
+
+ul.column3{
+	column-count: 3;
+}
+
+li{
+	margin-bottom: 0.3em;
+}
+
+dd{
+	margin-bottom: 1em;
+}
+
+dt::before,
+li::before{
+	position: absolute;
+	left: -1.6em;
+	font-family: var(--font-icon);
+	content: "\f058";
+	font-weight: 400;
+	color: var(--color-accent);
+}
+
+dt.like::before,
+li.like::before{
+	content: "\f004";
+	color: var(--color-main);
+	font-weight: 900;
+}
+
+dt.dislike::before,
+li.dislike::before{
+	content: "\f7a9";
+	font-weight: 900;
+}
+
+.link dt::before,
+.link li::before{
+	content: "\f35d";
+	font-weight: 900;
+}
+
+
+
+/* ↓イラスト */
+.illustlog figure .overlay {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.illustlog figure .overlay .img {
+  max-width: 200px; /* 好きな幅に調整 */
+  width: 100%;
+  height: auto;
+}
+
+
+/* ↓オフライン */
+.booklist{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2em;
+}
+
+.book{
+	padding: 1.3em;
+	width: calc(50% - 2em / 2);
+	border: solid 1px var(--color-accent);
+}
+
+.book .gaiyou{
+	display: flex;
+	align-items: flex-start;
+	gap: 1.5em;
+}
+
+.book .gaiyou img.hyoushi{
+	width: 40%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+.book h4{
+	font-weight: 600;
+}
+
+.book p.product{
+	margin: 0.3em 0;
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+	font-family: var(--font-alphanumeric);
+	font-weight: 600;
+	color: var(--color-main);
+}
+
+.book p.outline{
+	font-size: 0.95em;
+	line-height: 1.5;
+}
+
+.order{
+	display: flex;
+	align-content: space-between;
+	gap: 1em;
+	margin-top: 1em;
+	width: 100%;
+}
+
+.book .order a{
+	display: block;
+	width: 100%;
+	color: var(--color-light);
+	background-color: var(--color-accent);
+	line-height: 2.4;
+	text-align: center;
+	font-weight: bold;
+}
+
+.book .order a.soldout{
+	pointer-events: none;
+	background-color: #ECECEC;
+	color: #aaa;
+}
+
+
+/* ↓折り畳み */
+summary{
+	position: relative;
+	display: block;
+	margin: 2em auto 0;
+	padding: 0 3em;
+	width: fit-content;
+	height: 2.4em;
+	line-height: 2.4em;
+	font-weight: 600;
+	text-align: center;
+	cursor: pointer;
+	color: var(--color-accent);
+	border: solid 1px var(--color-accent);
+	border-radius: 2.4em;
+	transition: 0.3s;
+}
+
+summary span{
+	line-height: 2.4em;
+}
+
+summary:hover{
+	color: var(--color-light);
+	background-color: var(--color-accent);
+	opacity: 0.6;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+details[open] > * {
+	animation: fadeIn 0.5s ease;
+}
+
+details[open] > summary{
+	margin-bottom: 2em;
+}
+
+details[open] > summary span{
+	display: none;
+}
+
+details[open] > summary {
+	display: none;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0; /* 透明 */
+	}
+	100% {
+		opacity: 1;
+	}
+}

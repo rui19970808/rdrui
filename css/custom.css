@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* ↓フォント読み込み */
+/* 英数字フォント */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap');
+
+@font-face
+{
+font-family: きろ字 プロポーショナル;
+src: url('https://cdn.leafscape.be/kiloji/kiloji_p_web.woff2')
+     format("woff2");
+}
+
+@font-face
+{
+font-family: 瀬戸フォント;
+src: url('https://cdn.leafscape.be/setofont/setofont_web.woff2')
+     format("woff2");
+}
+        
+
+:root {
+	--color-base: #FFFAFA; /* 背景色などのベージュの部分 */
+	--color-main: #FF88E5; /* 赤い部分 */
+	--color-accent: #79A5FF; /* 青い部分 */
+	--color-text: #936899; /* 文字の色 */
+	--color-marker: #ffeeaa; /* 文字のマーカー部分の色 */
+	--color-light: #fff; /* 白い部分 */
+        --font-primary: '瀬戸フォント', 'Noto Sans JP', Meiryo, メイリオ, sans-serif; /* 日本語フォント */
+	--font-alphanumeric: 'Outfit', sans-serif; /* 英数フォント */
+	--font-icon: 'Font Awesome 6 Free'; /* アイコンフォント */
+}
+
+@media screen and (min-width: 1367px) {
+	html{ font-size:62.5%;}}
+@media screen and (max-width: 1366px) {
+	html{ font-size:50%;}}
+@media screen and (max-width: 800px) {
+	html{ font-size:90%;}}
+@media screen and (max-width: 500px) {
+	html{ font-size:62.5%;}}
+
+@media screen and (min-width: 769px) {
+	:root {
+		--margin-base: 4em;
+		--border-radius: 0.3em;
+	}
+
+	body{
+		font-size: 1.6rem;
+		letter-spacing: 0.15em;
+		line-height: 1.8;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	:root {
+		--margin-base: 2em;
+		--border-radius: 0.2em;
+	}
+
+	body{
+		font-size: 1.4rem;
+		letter-spacing: 0.15em;
+		line-height: 1.7;
+	}
+}
+
+/* 通常のリンク色（未クリック） */
+a:link {
+    color: #FF88E5; /* ピンク系 */
+    text-decoration: none; /* 下線を消す場合 */
+}
+
+/* クリック済みリンク色 */
+a:visited {
+    color: #79A5FF; /* 青系 */
+}
